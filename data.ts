@@ -6,7 +6,7 @@ export type Post = {
     comments: Comment[];
   };
   
-  export type Comment = {
+export type Comment = {
     id: number;
     postId: number;
     email: string;
@@ -18,7 +18,7 @@ export type Post = {
       id: 1,
       title: "Holanda possuí o maior jardim de flores do mundo",
       imageUrl: "https://www.queroviajarmais.com/wp-content/webp-express/webp-images/uploads/2020/08/keukenhof-holanda.jpg.webp",
-          body: "Já a Holanda possuí um jardim de flores fabuloso, que desabrocha na primavera e atraí turistas do mundo inteiro. Trata-se do Keukenhof que fica a 41 km da capital e pode ser incluído em um roteiro de 5 dias em Amsterdam.Já a Holanda possuí um jardim de flores fabuloso, que desabrocha na primavera e atraí turistas do mundo inteiro.",
+          body: "Na Holanda possuí um jardim de flores fabuloso, que desabrocha na primavera e atraí turistas do mundo inteiro. Trata-se do Keukenhof que fica a 41 km da capital e pode ser incluído em um roteiro de 5 dias em Amsterdam.Já a Holanda possuí um jardim de flores fabuloso, que desabrocha na primavera e atraí turistas do mundo inteiro.",
       comments: [
             {
             id: 1,
