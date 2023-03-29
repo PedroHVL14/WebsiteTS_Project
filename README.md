@@ -1,4 +1,3 @@
-npm install
+Projeto 01 
 
-cmd 1 -> npm run watch
-cmd 2 -> npm run server
+SP - Hybrid Mobile Journey (React Native) - AWS Cloud Context  - Compass UOL  06/03/2023
