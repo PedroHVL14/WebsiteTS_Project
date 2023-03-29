@@ -1,2 +1,4 @@
-# PedroVitorino_Challenge01
-Repositório para Projetos
+npm install
+
+cmd 1 -> npm run watch
+cmd 2 -> npm run server
