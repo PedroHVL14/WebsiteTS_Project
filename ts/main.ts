@@ -52,22 +52,43 @@ const postCard = ({ body, id, imageUrl, title}: PostCardType) =>
   `;
 
 
-const postsList = document.getElementById('posts-list')
+const container = document.getElementById('main')
 
-if (postsList) {
-  let postsDataToHTML = ''
+if (container) {
 
-  for (const postData of postsData) {  
-    postsDataToHTML += postCard(postData)
+  const handleShowPost = (postId: number) => {
+    console.log(postId)
+    // const comments = lista de comatarios com esse postId
+    let postHTML = ''
+  
+    postHTML += 'html do post'
+  
+    // cada elemento do array de comentarios, criar um commentCard
+    postHTML += 'um commentCard'
+  
+    container.innerHTML = postHTML
   }
 
-  postsList.innerHTML = postsDataToHTML
 
-  const postButtons = document.querySelectorAll('.post-btn');
-  postButtons.forEach((button) => {
-    button.addEventListener('click', function () {
-      console.log(+this.id);
+  const init = () => {
+    let postsDataToHTML = ''
+
+    for (const postData of postsData) {  
+      postsDataToHTML += postCard(postData)
+    }
+
+    container.innerHTML = postsDataToHTML
+
+    const postButtons = document.querySelectorAll('.post-btn');
+    postButtons.forEach((button) => {
+      button.addEventListener('click', function () {
+        //console.log(+this.id);
+        handleShowPost(+this.id)
+      });
     });
-  });
+  }
+
+  init()
 }
+
 

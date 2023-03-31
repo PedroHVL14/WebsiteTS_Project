@@ -1,71 +1,72 @@
 type PostCommentsType = {
-    id: number,
+    id2: number,
     postId: number,
     email: string,
-    body: string
+    body2: string
   }
 
-  const commentsData = [
+  export type { PostCommentsType};
+
+export const commentsData = [
     {
-        id: 1,
+        id2: 1,
         postId: 1,
         email: 'pedro@gmail.com',
-        body: 'Linda imagem!'
+        body2: 'Linda imagem!'
     },
     {
-        id: 1,
+        id2: 1,
         postId: 2,
         email: 'arthur@hotmail.com',
-        body: 'Uma bela paisagem =D',
+        body2: 'Uma bela paisagem =D',
     },
     {
-        id: 2,
+        id2: 2,
         postId: 1,
         email: 'ana@gmail.com',
-        body: 'Adoro esse site!',
+        body2: 'Adoro esse site!',
     },
     {
-        id: 2,
+        id2: 2,
         postId: 2,
         email: 'eduardo@gmail.com',
-        body: 'Que site bem feito =D',
+        body2: 'Que site bem feito =D',
     },
     {
-        id: 3,
+        id2: 3,
         postId: 1,
         email: 'pedro@gmail.com',
-        body: 'Que bela imagem!',
+        body2: 'Que bela imagem!',
     },
     {
-        id: 3,
+        id2: 3,
         postId: 2,
         email: 'eduardo@gmail.com',
-        body: 'Adoro esse site!',
+        body2: 'Adoro esse site!',
     },
     {
-        id: 4,
+        id2: 4,
         postId: 1,
         email: 'gabriela@hotmail.com',
-        body: 'Que site bem feito =D',
+        body2: 'Que site bem feito =D',
     },
     {
-        id: 4,
+        id2: 4,
         postId: 2,
         email: 'pedro@gmail.com',
-        body: 'Linda imagem!',
+        body2: 'Linda imagem!',
     },
     {
-        id: 5,
+        id2: 5,
         postId: 1,
         email: 'ana@gmail.com',
-        body: 'Adoro esse site!',
+        body2: 'Adoro esse site!',
     },
     {
-        id: 5,
+        id2: 5,
         postId: 2,
         email: 'gabriela@hotmail.com',
-        body: 'Uma bela paisagem =D',
+        body2: 'Uma bela paisagem =D',
     },
   ]
 
-  export { commentsData };
