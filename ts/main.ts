@@ -58,13 +58,16 @@ if (container) {
 
   const handleShowPost = (postId: number) => {
     console.log(postId)
-    // const comments = lista de comatarios com esse postId
-    let postHTML = ''
-  
-    postHTML += 'html do post'
-  
+    
+    const post = postsData.find((postData) => postData.id === postId)
+    if (!post) {
+      return
+    }
+
+    let postHTML = postCard(post)
+    
     // cada elemento do array de comentarios, criar um commentCard
-    postHTML += 'um commentCard'
+    postHTML += 
   
     container.innerHTML = postHTML
   }
@@ -82,7 +85,6 @@ if (container) {
     const postButtons = document.querySelectorAll('.post-btn');
     postButtons.forEach((button) => {
       button.addEventListener('click', function () {
-        //console.log(+this.id);
         handleShowPost(+this.id)
       });
     });
