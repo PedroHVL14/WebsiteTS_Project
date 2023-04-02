@@ -1,11 +1,18 @@
-type PostCardType = {
+export type PostDataType = {
   body: string,
   id: number,
   imageUrl: string,
   title: string
 }
+type PostCommentsType = {
+  id2: number,
+  postId: number,
+  email: string,
+  body2: string
+}
 
-const postsData = [
+
+const postsData: PostDataType[] = [
   {
     id: 1,
     title: 'Lago Louise em Alberta é um dos mais belos do planeta.',
@@ -38,7 +45,7 @@ const postsData = [
   }
 ];
 
-const postCard = ({ body, id, imageUrl, title}: PostCardType) =>
+const postCard = ({ body, id, imageUrl, title }: PostDataType) =>
   `
   <div class='post'>
     <button type='button' class='post-btn' id='${id}'>
@@ -51,6 +58,17 @@ const postCard = ({ body, id, imageUrl, title}: PostCardType) =>
   </div>
   `;
 
+const commentCard = ({ id2, postId, email, body2 }: PostCommentsType) =>
+  `
+  <div class='post'>
+    <button type='button' class='post-btn' id='${id2}'>
+      <div>
+        <h1>${email}</h1>
+        <p>${body2}</p>
+      </div>
+    </button>
+  </div>
+  `;
 
 const container = document.getElementById('main')
 
@@ -58,17 +76,14 @@ if (container) {
 
   const handleShowPost = (postId: number) => {
     console.log(postId)
-    
-    const post = postsData.find((postData) => postData.id === postId)
-    if (!post) {
-      return
+    let postHTML = ''
+
+    const filteredComments = commentsData.filter(comment => comment.postId === postId)
+
+    for (const postComment of filteredComments) {
+      postHTML += commentCard(postComment)
     }
 
-    let postHTML = postCard(post)
-    
-    // cada elemento do array de comentarios, criar um commentCard
-    postHTML += 
-  
     container.innerHTML = postHTML
   }
 
@@ -76,7 +91,7 @@ if (container) {
   const init = () => {
     let postsDataToHTML = ''
 
-    for (const postData of postsData) {  
+    for (const postData of postsData) {
       postsDataToHTML += postCard(postData)
     }
 
@@ -91,6 +106,69 @@ if (container) {
   }
 
   init()
+
+  const commentsData: PostCommentsType[] = [
+    {
+      id2: 1,
+      postId: 1,
+      email: 'pedro@gmail.com',
+      body2: 'Linda imagem!'
+    },
+    {
+      id2: 2,
+      postId: 1,
+      email: 'arthur@hotmail.com',
+      body2: 'Uma bela paisagem =D',
+    },
+    {
+      id2: 1,
+      postId: 2,
+      email: 'ana@gmail.com',
+      body2: 'Adoro esse site!',
+    },
+    {
+      id2: 2,
+      postId: 2,
+      email: 'eduardo@gmail.com',
+      body2: 'Que site bem feito =D',
+    },
+    {
+      id2: 1,
+      postId: 3,
+      email: 'pedro@gmail.com',
+      body2: 'Que bela imagem!',
+    },
+    {
+      id2: 2,
+      postId: 3,
+      email: 'eduardo@gmail.com',
+      body2: 'Adoro esse site!',
+    },
+    {
+      id2: 1,
+      postId: 4,
+      email: 'gabriela@hotmail.com',
+      body2: 'Que site bem feito =D',
+    },
+    {
+      id2: 2,
+      postId: 4,
+      email: 'pedro@gmail.com',
+      body2: 'Linda imagem!',
+    },
+    {
+      id2: 1,
+      postId: 5,
+      email: 'ana@gmail.com',
+      body2: 'Adoro esse site!',
+    },
+    {
+      id2: 2,
+      postId: 5,
+      email: 'gabriela@hotmail.com',
+      body2: 'Uma bela paisagem =D',
+    },
+  ]
 }
 
 
