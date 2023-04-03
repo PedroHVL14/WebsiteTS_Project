@@ -78,6 +78,11 @@ if (container) {
     console.log(postId)
     let postHTML = ''
 
+    const post = postsData.find((post) => post.id === postId)
+
+    if (post) {
+      postHTML += postCard(post)
+    }
     const filteredComments = commentsData.filter(comment => comment.postId === postId)
 
     for (const postComment of filteredComments) {
@@ -112,61 +117,61 @@ if (container) {
       id2: 1,
       postId: 1,
       email: 'pedro@gmail.com',
-      body2: 'Linda imagem!'
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.'
     },
     {
       id2: 2,
       postId: 1,
       email: 'arthur@hotmail.com',
-      body2: 'Uma bela paisagem =D',
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.',
     },
     {
       id2: 1,
       postId: 2,
       email: 'ana@gmail.com',
-      body2: 'Adoro esse site!',
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.',
     },
     {
       id2: 2,
       postId: 2,
       email: 'eduardo@gmail.com',
-      body2: 'Que site bem feito =D',
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.',
     },
     {
       id2: 1,
       postId: 3,
       email: 'pedro@gmail.com',
-      body2: 'Que bela imagem!',
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.',
     },
     {
       id2: 2,
       postId: 3,
       email: 'eduardo@gmail.com',
-      body2: 'Adoro esse site!',
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.',
     },
     {
       id2: 1,
       postId: 4,
       email: 'gabriela@hotmail.com',
-      body2: 'Que site bem feito =D',
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.',
     },
     {
       id2: 2,
       postId: 4,
       email: 'pedro@gmail.com',
-      body2: 'Linda imagem!',
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.',
     },
     {
       id2: 1,
       postId: 5,
       email: 'ana@gmail.com',
-      body2: 'Adoro esse site!',
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.',
     },
     {
       id2: 2,
       postId: 5,
       email: 'gabriela@hotmail.com',
-      body2: 'Uma bela paisagem =D',
+      body2: 'Olá! Este é uma mensagem de teste, criado para verificar se o sistema de envio e recebimento de mensagens está funcionando corretamente. Se você estiver lendo esta mensagem, isso significa que ela foi entregue com sucesso.',
     },
   ]
 }
