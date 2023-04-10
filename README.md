@@ -1,5 +1,5 @@
-Projeto 01 
+Project Type Script 01 
 
-SP - Hybrid Mobile Journey (React Native) - AWS Cloud Context  - Compass UOL  06/03/2023
+Simple Blog - Image / Description / Comments 
 
 Pedro Henrique Vitorino de Lima
