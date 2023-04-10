@@ -1,4 +1,4 @@
-Project Type Script 01 
+Type Script Project - 01 
 
 Simple Blog - Image / Description / Comments 
 
