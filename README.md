@@ -1,4 +1,4 @@
-# Type Script Project - 01 
+# Type Script Project - 01 💻
 <h2> Simple Blog - Image / Description / Comments  </h2> <br/>
 
 This TypeScript project is a website that showcases images along with their corresponding descriptions. Developed using TypeScript, HTML, and CSS.
